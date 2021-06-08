@@ -1,0 +1,22 @@
+#def count_vowels(text):
+#    if isinstance(text, str) == False:
+#        print(f"Type {text} not defined")
+#    else:
+#        return sum([1 for x in text.lower() if x in 'aeiou'])
+
+#В этом случае функция выдаст ответ 3  для c, а для b выдаст наш вывод: Type ['aaaa', 'aaaaa'] not defined
+
+
+def count_vowels(text: str) -> int:
+    return sum([1 for x in text if x in 'aeiou'])
+
+#Ответами для этой функции будет 3 для с, а для b  ответ 0, но при этом программа подсветит ['aaaa', 'aaaaa'], а если мы наведем на ['aaaa', 'aaaaa'], то нам напишут:
+#Expected type 'str', got  'list[str]' instead. Защита от дурака не очень, но за то программа стала намного короче.
+
+
+
+c = count_vowels('abcdabcdabcd')
+print(c)
+
+b = count_vowels(['aah', 'aah'])
+print(b)
