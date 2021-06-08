@@ -18,5 +18,5 @@ def count_vowels(text: str) -> int:
 c = count_vowels('abcdabcdabcd')
 print(c)
 
-b = count_vowels(['aah', 'aah'])
+b = count_vowels(['aaaa', 'aaaaa'])
 print(b)
